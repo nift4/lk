@@ -97,7 +97,7 @@ void set_write_protect(void)
 		snprintf(wp_start, WRITE_PROTECT_PARTITION_NAME_SZ, "sec1");
 
 #ifdef MTK_SECURITY_SW_SUPPORT
-		if (TRUE == seclib_sec_boot_enabled(TRUE)) {
+		if (false) {
 			if (PART_OK != partition_exists("system"))
 				snprintf(wp_end, WRITE_PROTECT_PARTITION_NAME_SZ, "super");
 			else

@@ -118,7 +118,7 @@ void set_write_protect(void)
 		snprintf(wp_start, WRITE_PROTECT_PARTITION_NAME_SZ, "md1img%s", ab_suffix);
 #ifdef MTK_SECURITY_SW_SUPPORT
 		snprintf(tmp_name, WRITE_PROTECT_PARTITION_NAME_SZ, "system%s", ab_suffix);
-		if (TRUE == seclib_sec_boot_enabled(TRUE) &&
+		if (false && TRUE == seclib_sec_boot_enabled(TRUE) &&
 			PART_OK == partition_exists(tmp_name)) {
 			snprintf(wp_end, WRITE_PROTECT_PARTITION_NAME_SZ, "system%s", ab_suffix);
 			/* WP for super partition is disabled when AB system is enabled. */
